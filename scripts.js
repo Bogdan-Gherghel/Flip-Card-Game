@@ -11,3 +11,14 @@ Array.prototype.memory_tile_shuffle = function () {
         this[i] = temp;
     }
 }
+
+function newBoard (){
+    tiles_flipped = 0;
+    var output = '';
+    memory_array.memory_tile_shuffle ();
+    for(var i = 0;i < memory_array.length; i++) {
+        output += '< div id="tile_'+i+'" onclick = "memoryFlipTile(this,\''+memory_array [i]+'\')"></div>';   
+    } 
+    document.getElementById('game_board').innerHTML = output;
+}
+
