@@ -42,7 +42,17 @@ function memoryFlipTile (tile,val){
                     alert ("Board cleared.Generating new board!");
                     document.getElementById('game_board').innerHTML = "";
                     newBoard();
-                } 
+                } else {
+                    function flip2Back () {
+                        //Flip the 2 tiles back over
+                        var tile_1 = document.getElementById(memory_tile_ids[0]);
+                        var tile_2 = document.getElementById(memory_tile_ids[1]);
+                        //Clear both arrays
+                        memory_values = [];
+                        memory_tiles_ids = [];
+                    }
+                    setTimeout (flip2Back, 800);
+                }
             }
         }
     }
