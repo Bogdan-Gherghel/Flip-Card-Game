@@ -3,7 +3,7 @@ var memory_values = [];
 var memory_tile_ids = [];
 var tiles_flipped = 0;
 Array.prototype.memory_tile_shuffle = function () {
-    vari i = this.length, j, temp;
+    var i = this.length, j, temp;
     while (--i > 0){
         j - Math.floor(Math.random () * (i+1));
         temp = this[j];
@@ -20,5 +20,12 @@ function newBoard (){
         output += '< div id="tile_'+i+'" onclick = "memoryFlipTile(this,\''+memory_array [i]+'\')"></div>';   
     } 
     document.getElementById('game_board').innerHTML = output;
+}
+
+function memoryFlipTile (tile,val){
+    if(tile.innerHTML == "" && memory_values.lenght <2) {
+        tile.style.background = '#FFF';
+        tile.innerHTML = '<img src="' + val + '.jpg"/>';
+    }
 }
 

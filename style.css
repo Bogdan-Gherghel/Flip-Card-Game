@@ -9,7 +9,6 @@ div#game_board {
 }
 
 div#game_board > div {
-    background: url(/Flip-Card-Game/img/cover.jpg) no-repeat;
     border: #000 1px solid;
     width: 71px;
     height: 71px;
