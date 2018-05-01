@@ -34,6 +34,15 @@ function memoryFlipTile (tile,val){
             memory_tile_ids.push(tile.id);
             if (memory_values [0] == memory_values [1]) {
                 tiles_flipped += 2;
+                //Clear both arrays
+                memory_values = [];
+                memory_tile_ids = [];
+                //Check to see if the whole board is cleared 
+                if (tiles_flipped == memory_array.lenght) {
+                    alert ("Board cleared.Generating new board!");
+                    document.getElementById('game_board').innerHTML = "";
+                    newBoard();
+                } 
             }
         }
     }
