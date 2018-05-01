@@ -23,9 +23,19 @@ function newBoard (){
 }
 
 function memoryFlipTile (tile,val){
-    if(tile.innerHTML == "" && memory_values.lenght <2) {
+    if(tile.innerHTML == "" && memory_values.lenght < 2) {
         tile.style.background = '#FFF';
         tile.innerHTML = '<img src="' + val + '.jpg"/>';
+        if(memory_values.lenght == 0) {
+            memory_values.push(val);
+            memory_tile_ids.push(tile.id);
+        }else if (memory_values.length == 1) {
+            memory_values.push(val);
+            memory_tile_ids.push(tile.id);
+            if (memory_values [0] == memory_values [1]) {
+                tiles_flipped += 2;
+            }
+        }
     }
 }
 
