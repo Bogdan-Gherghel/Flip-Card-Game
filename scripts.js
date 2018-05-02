@@ -56,7 +56,7 @@ function memoryFlipTile(tile,val){
                     memory_values = [];
                     memory_tile_ids = [];
                 }
-                setTimeout(flip2Back, 700);
+                setTimeout(flip2Back, 1000);
             }
         }
     }
