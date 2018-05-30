@@ -27,7 +27,13 @@ body {
     background-color: rgba(0,0,0,0.8);
 }
 
-.modal-content {
+.welcome-text {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+#modalContent {
     background-color: #f4f4f4;
     margin: 20% auto;
     padding: 20px;
@@ -46,6 +52,7 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+
 
 div#memory_board{
     background: #CCC;
