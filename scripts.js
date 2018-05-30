@@ -1,3 +1,9 @@
+
+
+
+
+
+//Game code
 var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L'];
 var memory_values = [];
 var memory_tile_ids = [];
@@ -11,6 +17,8 @@ Array.prototype.memory_tile_shuffle = function(){
         this[i] = temp;
     }
 }
+
+
 
 function newBoard(){
     tiles_flipped = 0;
@@ -52,14 +60,19 @@ function memoryFlipTile(tile,val){
                 memory_tile_ids = [];
                 // Check to see if the whole board is cleared
                 if(tiles_flipped == memory_array.length){
-                    alert("Board cleared... generating new board");
+                    alert("Congratulations,you matched all cards.\n Please press ok to generate new board");
                     document.getElementById('memory_board').innerHTML = "";
                     newBoard();
                 }
-            } else {
-                
+             } else {
                 setTimeout(flip2Back, 1000);
             }
         }
     }
+}
+
+// Function to close modal window
+window.onload=function(){
+let modal = () => document.getElementById('simpleModal').style.display = 'none';
+document.getElementById('modalContent').addEventListener('click', modal);
 }
